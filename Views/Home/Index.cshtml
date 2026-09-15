@@ -9,7 +9,7 @@
     <div class="container">
         <h1 class="display-3 mb-4">Delicious Food Delivered To Your Door</h1>
         <p class="lead mb-4">Order your favorite meals online and enjoy quick delivery</p>
-        <a href="#" class="btn btn-light btn-lg">Order Now <i class="bi bi-arrow-right"></i></a>
+        <a href="/Menu" class="btn btn-light btn-lg">Order Now <i class="bi bi-arrow-right"></i></a>
     </div>
 </div>
 
@@ -17,7 +17,7 @@
 
 <div class="row mb-4">
     <div class="col-md-12 text-center">
-        <a href="/Menu" class="btn btn-outline-success me-2">All</a>
+        <a href="/Menu" class="btn btn-outline-primary me-2">All</a>
         @foreach (var cat in ViewBag.Categories)
         {
             <a href="/Menu?categoryId=@cat.Id" class="btn btn-outline-success me-2">@cat.Name</a>

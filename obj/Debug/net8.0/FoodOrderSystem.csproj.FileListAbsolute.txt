@@ -146,3 +146,4 @@ C:\Users\glorenzo\source\repos\FoodOrderSystem\obj\Debug\net8.0\FoodOrderSystem.
 C:\Users\glorenzo\source\repos\FoodOrderSystem\obj\Debug\net8.0\FoodOrderSystem.genruntimeconfig.cache
 C:\Users\glorenzo\source\repos\FoodOrderSystem\obj\Debug\net8.0\ref\FoodOrderSystem.dll
 C:\Users\glorenzo\source\repos\FoodOrderSystem\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\glorenzo\source\repos\FoodOrderSystem\obj\Debug\net8.0\FoodOrderSystem.sourcelink.json
