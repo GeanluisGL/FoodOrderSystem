@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|c:\\users\\glorenzo\\source\\repos\\foodordersystem\\views\\order\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|solutionrelative:views\\order\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|c:\\users\\glorenzo\\source\\repos\\foodordersystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|c:\\users\\glorenzo\\source\\repos\\foodordersystem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|c:\\users\\glorenzo\\source\\repos\\foodordersystem\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|c:\\users\\glorenzo\\source\\repos\\foodordersystem\\views\\order\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|solutionrelative:views\\order\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|c:\\users\\glorenzo\\source\\repos\\foodordersystem\\views\\menu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|solutionrelative:views\\menu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|c:\\users\\glorenzo\\source\\repos\\foodordersystem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC4DF264-2D91-5CF1-79F0-1F193C41D1D4}|FoodOrderSystem.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowDEAAAA/AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-15T19:05:48.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Cart.cshtml",
-              "DocumentMoniker": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Views\\Order\\Cart.cshtml",
-              "RelativeDocumentMoniker": "Views\\Order\\Cart.cshtml",
-              "ToolTip": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Views\\Order\\Cart.cshtml",
-              "RelativeToolTip": "Views\\Order\\Cart.cshtml",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwDsAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-15T18:39:06.576Z",
+              "WhenOpened": "2026-09-15T20:29:00.404Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAowCoAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-15T15:41:57.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Views\\Menu\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Menu\\Index.cshtml",
               "ToolTip": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Views\\Menu\\Index.cshtml",
               "RelativeToolTip": "Views\\Menu\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-14T19:07:45Z",
+              "WhenOpened": "2026-09-15T20:22:19.898Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
               "ToolTip": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Controllers\\OrderController.cs",
               "RelativeToolTip": "Controllers\\OrderController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAA3wEUAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAowCsAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T18:47:58.259Z",
+              "WhenOpened": "2026-09-15T19:39:33.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cart.cshtml",
+              "DocumentMoniker": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Views\\Order\\Cart.cshtml",
+              "RelativeDocumentMoniker": "Views\\Order\\Cart.cshtml",
+              "ToolTip": "C:\\Users\\glorenzo\\source\\repos\\FoodOrderSystem\\Views\\Order\\Cart.cshtml",
+              "RelativeToolTip": "Views\\Order\\Cart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-15T18:39:06.576Z",
               "EditorCaption": ""
             }
           ]

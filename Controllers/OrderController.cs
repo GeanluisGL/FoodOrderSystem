@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using FoodOrderSystem.Models;
 using Newtonsoft.Json;
+using System.Linq;
+
 
 namespace FoodOrderSystem.Controllers
 {
@@ -39,7 +41,7 @@ namespace FoodOrderSystem.Controllers
             }
 
             SaveCart(cart);
-            return RedirectToAction("#");
+            return RedirectToAction("Cart");
         }
 
         private List<CartItem> GetCart()
@@ -63,11 +65,35 @@ namespace FoodOrderSystem.Controllers
 
         }
 
+        public IActionResult RemoveFromCart(int foodItemId)
+        {
+            var cart = GetCart();
+            var item = cart.FirstOrDefault(c => c.FoodItemId == foodItemId);
+            if (item != null)
+            {
+                cart.Remove(item);
+                SaveCart(cart);
+            }
+            return RedirectToAction("Cart");
+        }
+
+        [HttpPost]
+        public IActionResult UpdateQuantity(int foodItemId, int quantity)
+        {
+            var cart = GetCart();
+            var item = cart.FirstOrDefault(c => c.FoodItemId == foodItemId);
+            if (item != null && quantity > 0)
+            {
+                item.Quantity = quantity;
+                SaveCart(cart);
+            }
+            return RedirectToAction("Cart");
+        }
     }
 
 
     public class CartItem
-    { 
+    {   
         public int FoodItemId { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }

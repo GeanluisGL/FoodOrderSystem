@@ -1,60 +1,53 @@
-﻿@model List<FoodOrderSystem.Controllers.CartItem>
-@{
-    ViewData["Title"] = "Shopping Cart";
-}
-
-<div class="container my-5">
-    <h2 class="text-center mb-4">Your Cart</h2>
-
-    @if (!Model.Any())
-    {
-        <div class="text-center">
-            <p>Your cart is empty. <a asp-action="Index" asp-controller="Menu">Continue shopping</a></p>
-        </div>
-    }
-    else
-    {
-        <!-- Lista de artículos centrada -->
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                @foreach (var item in Model)
-                {
-                    <div class="card mb-3 shadow-sm">
-                        <div class="row g-0 align-items-center">
-                            <div class="col-md-4">
-                                <img src="@item.ImageUrl" class="img-fluid rounded-start" alt="@item.Name"
-                                     style="height: 150px; width: 100%; object-fit: cover;">
+﻿<div class="row">
+    <!-- Cart Items -->
+    <div class="col-lg-8">
+        @foreach (var item in Model) {
+            <div class="card mb-3 shadow-sm">
+                <div class="row g-0 align-items-center">
+                    <!-- Image -->
+                    <div class="col-md-3">
+                        <img src="@item.ImageUrl" class="img-fluid rounded-start" alt="@item.Name" style="height: 100%; min-height: 120px; object-fit: cover;">
+                    </div>
+                    <!-- Details -->
+                    <div class="col-md-9">
+                        <div class="card-body d-flex justify-content-between align-items-center">
+                            <div>
+                                <h5 class="card-title fw-bold">@item.Name</h5>
+                                <p class="card-text text-primary fw-bold mb-0">$@item.Price</p>
                             </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">@item.Name</h5>
-                                    <p class="card-text text-primary fw-bold">$@item.Price</p>
-                                    <form action="/Order/UpdateQuantity" method="post" class="d-flex align-items-center">
-                                        <input type="hidden" name="foodItemId" value="@item.FoodItemId" />
-                                        <input type="number" name="quantity" value="@item.Quantity" min="1"
-                                               class="form-control form-control-sm me-2" style="width: 70px;" />
-                                        <button type="submit" class="btn btn-outline-secondary btn-sm">Update</button>
-                                    </form>
-                                </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <!-- Form for Update -->
+                                <form action="/Order/UpdateQuantity" method="post" class="d-flex align-items-center gap-2 m-0">
+                                    <input type="hidden" name="foodItemId" value="@item.FoodItemId" />
+                                    <input type="number" name="quantity" value="@item.Quantity" min="1" class="form-control form-control-sm text-center" style="width: 60px;" />
+                                    <button type="submit" class="btn btn-outline-secondary btn-sm">Update</button>
+                                </form>
+                                <!-- Delete Button -->
+                                <a href="/Order/RemoveFromCart?foodItemId=@item.FoodItemId" class="btn btn-danger btn-sm">
+                                    <i class="bi bi-trash"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                }
-            </div>
-        </div>
-
-        <!-- Resumen del pedido centrado debajo -->
-        <div class="row justify-content-center mt-4">
-            <div class="col-lg-8">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Order Summary</h5>
-                        <hr />
-                        <p class="card-text fs-5">Total: <strong>$@ViewBag.Total</strong></p>
-                        <a href="#" class="btn btn-primary w-100">Proceed to Checkout</a>
-                    </div>
                 </div>
             </div>
+        }
+    </div>
+    <!-- Order Summary -->
+    <div class="col-lg-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Order Summary</h5>
+                <hr />
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="text-muted">Total:</span>
+                    <span class="fw-bold fs-5 text-primary">$@ViewBag.Total</span>
+                </div>
+                <a href="#" class="btn btn-primary w-100">
+                    Proceed to Checkout <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
         </div>
-    }
-</div>
+    </div>
+
+    </div>
