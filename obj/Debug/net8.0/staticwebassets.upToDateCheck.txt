@@ -1,5 +1,14 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\7upcan.jpg
+wwwroot\images\7upregular.jpg
+wwwroot\images\Cheeseburger.jpg
+wwwroot\images\Energybull.jpg
+wwwroot\images\hawaiianpizza.jpg
+wwwroot\images\Margheritapizza.jpg
+wwwroot\images\Pepperonipizza.jpg
+wwwroot\images\pepsibottle.jpg
+wwwroot\images\pepsican.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -58,12 +67,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\images\7upcan.jpg
-wwwroot\images\7upregular.jpg
-wwwroot\images\Cheeseburger.jpg
-wwwroot\images\Energybull.jpg
-wwwroot\images\hawaiianpizza.jpg
-wwwroot\images\Margheritapizza.jpg
-wwwroot\images\Pepperonipizza.jpg
-wwwroot\images\pepsibottle.jpg
-wwwroot\images\pepsican.jpg
