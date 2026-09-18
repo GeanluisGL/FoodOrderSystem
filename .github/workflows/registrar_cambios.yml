@@ -1,5 +1,7 @@
 name: Registrar Cambios en Excel
-
+env:
+    TZ: America/Santo_Domingo
+    
 on:
   push:
     branches:
@@ -43,7 +45,7 @@ jobs:
       # 4. Ejecutar script
       - name: Ejecutar script de registro
         run: |
-          python scripts/registrar_cambio.py \
+            python scripts/registrar_cambio.py \
             "${{ github.actor }}" \
             "${{ github.ref }}" \
             "${{ github.event.release.tag_name || '' }}" \
