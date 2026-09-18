@@ -3,50 +3,68 @@ name: Registrar Cambios en Excel
 on:
   push:
     branches:
-      - '**' # Se activa en absolutamente cualquier rama
+      - '**'
+    paths-ignore:
+      - 'historial_cambios.xlsx'   # 🔑 evita el bucle infinito
   release:
-    types: [published] # Se activa cuando se crea un release oficial
+    types: [published]
+
+# 🔑 evita ejecuciones simultáneas que corrompan el Excel
+concurrency:
+  group: historial-cambios-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   update-log:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Permiso crucial para que GitHub Actions pueda guardar el Excel modificado
+      contents: write
 
     steps:
-    # 1. Descargar el código del repositorio
-    - name: Checkout del repositorio
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+      # 1. Checkout
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-    # 2. Configurar el entorno de Python
-    - name: Configurar Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x'
+      # 2. Python
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-    # 3. Instalar la librería para manejar Excel
-    - name: Instalar dependencias
-      run: |
-        python -m pip install --upgrade pip
-        pip install openpyxl
+      # 3. Dependencias
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install openpyxl
 
-    # 4. Ejecutar el script enviando las variables de GitHub
-    - name: Ejecutar script de registro
-      run: |
-        python update_excel.py \
-          "${{ github.actor }}" \
-          "${{ github.ref }}" \
-          "${{ github.event.release.tag_name }}" \
-          "${{ github.event.head_commit.message }}" \
-          "${{ github.sha }}"
+      # 4. Ejecutar script
+      - name: Ejecutar script de registro
+        run: |
+          python scripts/registrar_cambio.py \
+            "${{ github.actor }}" \
+            "${{ github.ref }}" \
+            "${{ github.event.release.tag_name || '' }}" \
+            "${{ github.event.head_commit.message || github.event.release.name || 'Release publicado' }}" \
+            "${{ github.sha }}"
 
-    # 5. Guardar el archivo Excel modificado de vuelta en GitHub
-    - name: Guardar cambios en el repositorio
-      run: |
-        git config --global user.name "GitHub Actions Bot"
-        git config --global user.email "actions@github.com"
-        git add historial_cambios.xlsx
-        # Solo hacer commit si el archivo realmente cambió para evitar bucles de error
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Changelog automatizado: Registro de cambio por ${{ github.actor }}" && git push)
+      # 5. Commit y push (solo si el Excel cambió)
+      - name: Guardar cambios en el repositorio
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+
+          # Si no hay cambios, salir sin hacer nada
+          if git diff --quiet -- historial_cambios.xlsx; then
+            echo "Sin cambios en el Excel. Nada que hacer."
+            exit 0
+          fi
+
+          git add historial_cambios.xlsx
+          git commit -m "chore: changelog automatizado [${{ github.actor }}]"
+
+          # Traer cambios remotos por si alguien más hizo push mientras tanto
+          git pull --rebase origin ${{ github.ref_name }} || true
+          git push origin HEAD:${{ github.ref_name }}
