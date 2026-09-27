@@ -7,7 +7,9 @@ from openpyxl.styles import Font
 
 
 # ==========================================================
+
 # 1. Configuración
+
 # ==========================================================
 EXCEL_FILE = "historial_cambios.xlsx"
 SHEET_NAME = "Historial de Cambios"
