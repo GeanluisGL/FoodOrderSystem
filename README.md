@@ -2,6 +2,7 @@
 
 Sistema de gestión de pedidos de comida desarrollado como proyecto [académico/personal/empresarial]. Permite [breve descripción: registrar pedidos, gestionar menús, administrar clientes, etc.].
 
+
 ## 📋 Tabla de Contenidos
 
 - [Descripción](#-descripción)
