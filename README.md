@@ -4,7 +4,6 @@ Sistema de gestión de pedidos de comida desarrollado como proyecto personal/emp
 
 
 ## 📋 Tabla de Contenidos
-
 - [Descripción](#-descripción)
 - [Características](#-características)
 - [Tecnologías](#-tecnologías)
@@ -18,7 +17,6 @@ Sistema de gestión de pedidos de comida desarrollado como proyecto personal/emp
 - [Autor](#-autor)
 
 ## 📖 Descripción
-
 FoodOrderSystem es una aplicación diseñada para [explicar el propósito: optimizar la toma de pedidos en restaurantes, facilitar pedidos en línea, etc.]. El sistema permite a los usuarios [lista breve de funcionalidades principales].
 
 ## ✨ Características
